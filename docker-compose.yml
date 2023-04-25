@@ -8,4 +8,4 @@ services:
       - POSTGRES_USER=antyoma
       - POSTGRES_PASWORD=admin123
     ports:
-      -5432:5432
+      - 5432:5432
