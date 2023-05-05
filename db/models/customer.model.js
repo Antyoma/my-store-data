@@ -1,6 +1,7 @@
 const { Model, DataTypes, Sequelize } = require('sequelize');
 
-const { USER_TABLE } = require('./user.model')
+const { USER_TABLE } = require('./user.model');
+const { string } = require('joi');
 
 const CUSTOMER_TABLE = 'customers';
 
@@ -34,6 +35,7 @@ const CustomerSchema =  {
     field: 'user_id',
     allowNull: false,
     type: DataTypes.INTEGER,
+    unique: true,
     references: {
       model: USER_TABLE,
       key: 'id'
